@@ -1,0 +1,98 @@
+body {
+  background: #dff0d8;
+  text-align: center;
+}
+
+body:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: url("https://tasknotes.files.wordpress.com/2016/12/texture-numbers-xs.png");
+}
+
+#project-note {
+  margin: 0px;
+}
+
+.page-header {
+  background-color: #3d6d2a;
+  color: #dff0d8;
+  margin: 0px;
+}
+.page-header h1 {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+#game-extras {
+  background: #93cd7c;
+  color: #3d6d2a;
+  padding: 5px 5px;
+}
+#game-extras .game-stats > meter {
+  font-size: large;
+}
+
+#game-board .card {
+  background-color: #5ca43f;
+  background: url("https://www.transparenttextures.com/patterns/argyle.png") #5ca43f;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px;
+}
+#game-board .card .card-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+  background: #ffffe6;
+  opacity: 0.7;
+  border: 1px solid #3d6d2a;
+}
+#game-board .card.card-selected {
+  border: 2px solid #ffff66;
+  color: #5ca43f;
+}
+#game-board .card.card-visible .card-content, #game-board .card.card-selected .card-content {
+  display: block;
+}
+
+#game-completed {
+  color: #5ca43f;
+  font-size: 48px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+@media (max-width: 767px) {
+  .card {
+    height: 60px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    height: 80px;
+    font-size: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    height: 120px;
+    font-size: 64px;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    height: 150px;
+    font-size: 72px;
+  }
+}
