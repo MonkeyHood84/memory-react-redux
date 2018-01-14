@@ -35,3 +35,5 @@ const pairsList = [{
       id: 12,
       text: "12"
     }];
+
+  export default pairsList;

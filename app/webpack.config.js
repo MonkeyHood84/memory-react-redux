@@ -14,11 +14,11 @@ var config = {
   devtool: 'source-map',
   module: {
     loaders: [{
-      test: /\.jsx$/,
+      test: /\.(js|jsx)$/,
       include: DEV,
       loader: "babel-loader",
       query: {
-        presets: ['react', 'es2015']
+        presets: ['react', 'es2015', 'stage-3']
       }
     },
     {
@@ -37,7 +37,7 @@ var config = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'dist/style.css',
+      filename: 'style.css',
       allChunks: true
     })
   ]

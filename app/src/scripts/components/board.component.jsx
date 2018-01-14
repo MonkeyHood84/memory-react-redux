@@ -1,6 +1,8 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import CardComponent from './card.component.jsx';
 
-class BoardComponent extends React.Component {
+export default class BoardComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -8,7 +10,7 @@ class BoardComponent extends React.Component {
     };
   };
   componentWillReceiveProps(nextProps){
-    this.setState({cards: nextProps.game});
+    //this.setState({cards: nextProps.game});
   };
   cardUp(card) {
 
@@ -16,9 +18,12 @@ class BoardComponent extends React.Component {
   };
   render() {
     var board = this;
-    var cards = this.state.cards.map(function(card) {
-      return <CardComponent id={card.id} key={card.id} card={card} 
-               onSelectedCard={board.props.onSelectedCard.bind(this, card)} />;
+    var cards = this.props.game.map(function(card) {
+      return <CardComponent id={card.id} key={card.id} 
+        card={card} 
+        firstCard={board.props.firstCard}
+        secondCard={board.props.secondCard}
+        onSelectedCard={board.props.onSelectedCard.bind(this, card)} />;
     });
     return (
       <section id="game-board" className="row">

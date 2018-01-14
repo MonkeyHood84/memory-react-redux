@@ -1,4 +1,7 @@
-class OptionsComponent extends React.Component {
+import React from "react";
+import ReactDOM from "react-dom";
+
+export default class OptionsComponent extends React.Component {
   render() {
     return (
       <aside className="col-xs-4 text-right game-options">

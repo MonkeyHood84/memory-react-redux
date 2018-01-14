@@ -81,6 +81,20 @@ body:before{
   font-size: 48px;
 }
 
+.status-box {
+    color:  darken($primary-color, 20%);
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background: lighten($primary-color, 20%);
+    opacity: 0.8; 
+    height: 100%;
+    
+    p { 
+      font-size: 1.5em;
+      color: white; }
+}
+
 //////////////// Override Bootsrap ////////////////
 
 .row {

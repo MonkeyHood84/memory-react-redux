@@ -1,4 +1,7 @@
-class StatsComponent extends React.Component {
+import React from "react";
+import ReactDOM from "react-dom";
+
+export default class StatsComponent extends React.Component {
   render() {
     var totalPairs = this.props.game.length / 2;
     var matchedPairs = this.props.game.filter((val) => {
